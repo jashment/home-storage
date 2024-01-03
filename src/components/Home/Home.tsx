@@ -1,0 +1,45 @@
+import tw from 'tailwind-styled-components'
+
+const Home = () => {
+  return (
+    <Container>
+      <Heading>Home Storage</Heading>
+      <Categories>
+        <Box>
+          <p>What would you like to do?</p>
+        </Box>
+        <Box />
+        <Box />
+        <Box />
+      </Categories>
+    </Container>
+  )
+}
+
+const Container = tw.div`
+  flex
+  container
+  mx-auto
+  flex-col
+`
+
+const Heading = tw.h1`
+  mx-auto
+  font-bold
+`
+
+const Categories = tw.div`
+  border-black
+  mx-auto
+`
+
+const Box = tw.div`
+  border-solid
+  border-2
+  border-black
+  h-20
+  w-20
+
+`
+
+export default Home
