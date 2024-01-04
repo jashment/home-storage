@@ -6,9 +6,9 @@ const Home = () => {
       <Heading>Home Storage</Heading>
       <p className='mx-auto'>What would you like to do?</p>
       <Categories>
-        <Box />
-        <Box />
-        <Box />
+        <Box>Food</Box>
+        <Box>Bath</Box>
+        <Box>Add</Box>
       </Categories>
     </Container>
   )
