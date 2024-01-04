@@ -4,10 +4,8 @@ const Home = () => {
   return (
     <Container>
       <Heading>Home Storage</Heading>
+      <p className='mx-auto'>What would you like to do?</p>
       <Categories>
-        <Box>
-          <p>What would you like to do?</p>
-        </Box>
         <Box />
         <Box />
         <Box />
@@ -31,6 +29,11 @@ const Heading = tw.h1`
 const Categories = tw.div`
   border-black
   mx-auto
+  flex
+  flex-col
+  md:flex-row
+  flex-wrap
+  justify-around
 `
 
 const Box = tw.div`
@@ -39,7 +42,7 @@ const Box = tw.div`
   border-black
   h-20
   w-20
-
+  m-3
 `
 
 export default Home
