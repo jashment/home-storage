@@ -1,8 +1,12 @@
 import Drawer from "./Drawer";
 
-const DrawerContainer = () => {
+interface DrawerTypes {
+    drawerIsOpen: boolean
+}
+
+const DrawerContainer = ({drawerIsOpen}: DrawerTypes) => {
     return (
-        <Drawer />
+        <Drawer drawerIsOpen={drawerIsOpen} />
     )
 }
 
