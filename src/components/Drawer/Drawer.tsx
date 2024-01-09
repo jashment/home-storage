@@ -13,11 +13,9 @@ const Drawer = ({ setDrawerIsOpen }: DrawerTypes) => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                 </svg>
             </TWCloseButton>
-
             <TWItem />
             <TWItem />
             <TWItem />
-
             <button>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -33,19 +31,18 @@ const TWDrawer = tw.div`
     border-solid
     border-black
     border-t-2
-    md:border-t-0
     bottom-0
     w-full
     fixed
     h-20
     items-center
     justify-between
+    md:border-t-0
     md:border-r-2
     md:h-full
     md:w-20
     md:flex-col
     md:items-center
-
 `
 
 const TWItem = tw.div`
