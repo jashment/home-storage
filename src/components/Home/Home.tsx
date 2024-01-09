@@ -33,10 +33,7 @@ const Heading = tw.h1`
 `
 
 const TWDrawerButton = tw.button`
-    flex
-    flex-1
-    mt-5
-    ml-5
+    flex-initial
     invisible
     md:visible
 `
