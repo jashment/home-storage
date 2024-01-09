@@ -5,6 +5,7 @@ import Drawer from '../Drawer'
 
 const Home = () => {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false)
+
   return (
     <Container>
       <Heading>Home Storage</Heading>
@@ -14,7 +15,7 @@ const Home = () => {
           <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
       </TWDrawerButton>
-      {drawerIsOpen ? <Drawer drawerIsOpen={drawerIsOpen} /> : null}
+      {drawerIsOpen ? <Drawer setDrawerIsOpen={setDrawerIsOpen} /> : null}
       <Categories />
     </Container>
   )
@@ -32,10 +33,10 @@ const Heading = tw.h1`
 `
 
 const TWDrawerButton = tw.button`
-    absolute
+    flex
+    flex-1
     mt-5
     ml-5
-    z-10
     invisible
     md:visible
 `
