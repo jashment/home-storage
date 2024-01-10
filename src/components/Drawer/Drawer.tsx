@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react"
+import { Dispatch, SetStateAction, useEffect } from "react"
 import tw from "tailwind-styled-components"
 
 interface DrawerTypes {
@@ -27,8 +27,26 @@ const Drawer = ({ drawerIsOpen, setDrawerIsOpen }: DrawerTypes) => {
     md:flex-col
     md:items-center
 
-    transition-transform transform ${() => drawerIsOpen ? 'translate-x-full' : 'translate-x-0'}
+    transition-transform 
+    transform 
+    duration-1000 
+    ${() => drawerIsOpen ? 'translate-x-0' : '-translate-x-full'}
 `
+
+const handleResize = () => {
+    const windowWidth = window.innerWidth;
+    setDrawerIsOpen(windowWidth <= 768);
+  };
+
+  useEffect(() => {
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
     return (
         <TWDrawer>
             <TWCloseButton onClick={() => setDrawerIsOpen(!drawerIsOpen)}>
