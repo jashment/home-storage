@@ -2,12 +2,13 @@ import { Dispatch, SetStateAction } from "react";
 import Drawer from "./Drawer";
 
 interface DrawerTypes {
+    drawerIsOpen: boolean
     setDrawerIsOpen: Dispatch<SetStateAction<boolean>>
 }
 
-const DrawerContainer = ({ setDrawerIsOpen}: DrawerTypes) => {
+const DrawerContainer = ({ drawerIsOpen, setDrawerIsOpen }: DrawerTypes) => {
     return (
-        <Drawer setDrawerIsOpen={setDrawerIsOpen} />
+        <Drawer drawerIsOpen={drawerIsOpen} setDrawerIsOpen={setDrawerIsOpen} />
     )
 }
 

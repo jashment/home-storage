@@ -2,15 +2,38 @@ import { Dispatch, SetStateAction } from "react"
 import tw from "tailwind-styled-components"
 
 interface DrawerTypes {
+    drawerIsOpen: boolean
     setDrawerIsOpen: Dispatch<SetStateAction<boolean>>
 }
 
-const Drawer = ({ setDrawerIsOpen }: DrawerTypes) => {
+const Drawer = ({ drawerIsOpen, setDrawerIsOpen }: DrawerTypes) => {
+    const TWDrawer = tw.div`
+    bg-white
+    flex
+    border-solid
+    border-black
+    border-t
+    bottom-0
+    w-full
+    fixed
+    h-20
+    items-center
+    justify-around
+    drop-shadow-xl
+    md:border-t-0
+    md:border-r
+    md:h-full
+    md:w-32
+    md:flex-col
+    md:items-center
+
+    transition-transform transform ${() => drawerIsOpen ? 'translate-x-full' : 'translate-x-0'}
+`
     return (
         <TWDrawer>
-            <TWCloseButton onClick={() => setDrawerIsOpen(false)}>
+            <TWCloseButton onClick={() => setDrawerIsOpen(!drawerIsOpen)}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                 </svg>
             </TWCloseButton>
             <TWItem />
@@ -25,25 +48,7 @@ const Drawer = ({ setDrawerIsOpen }: DrawerTypes) => {
     )
 }
 
-const TWDrawer = tw.div`
-    bg-white
-    flex
-    border-solid
-    border-black
-    border-t-2
-    bottom-0
-    w-full
-    fixed
-    h-20
-    items-center
-    justify-between
-    md:border-t-0
-    md:border-r-2
-    md:h-full
-    md:w-20
-    md:flex-col
-    md:items-center
-`
+
 
 const TWItem = tw.div`
     border-solid
@@ -55,9 +60,6 @@ const TWItem = tw.div`
 `
 
 const TWCloseButton = tw.button`
-    absolute
-    mt-5
-    ml-5
     invisible
     md:visible
 `
