@@ -63,8 +63,8 @@ const Drawer = ({ drawerIsOpen, setDrawerIsOpen }: DrawerTypes) => {
 }
 
 const TWCloseButton = tw.button`
-    invisible
-    md:visible
+    hidden
+    md:block
 `
 
 export default Drawer
