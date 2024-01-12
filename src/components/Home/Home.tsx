@@ -6,7 +6,6 @@ const Home = () => {
   return (
     <TWAllContainer>
       <TWHomeContainer>
-        <Heading>Home Storage</Heading>
         <p className='mx-auto'>What would you like to do?</p>
         <Categories />
       </TWHomeContainer>
@@ -21,28 +20,11 @@ const TWAllContainer = tw.div`
   w-full
 `
 
-const TWDrawerContainer = tw.div`
-  md:basis-1/6
-  flex-col
-`
-
 const TWHomeContainer = tw.div`
   flex
   mx-auto
   flex-col
 `
 
-const Heading = tw.h1`
-  mx-auto
-  font-bold
-`
-
-const TWDrawerButton = tw.button`
-  absolute
-  mt-5
-  ml-5
-  invisible
-  md:visible
-`
 
 export default Home

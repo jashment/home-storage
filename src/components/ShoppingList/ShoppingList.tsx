@@ -18,32 +18,39 @@ const ShoppingList = () => {
 
     return (
         <TWShoppingContainer>
-            {items.map((item) => (
-                <div key={item.id} className="flex items-center">
-                    <input
-                        type="checkbox"
-                        id={`item-${item.id}`}
-                        checked={item.checked}
-                        onChange={() => handleCheckboxChange(item.id)}
-                        className="mr-2"
-                    />
-                    <label
-                        htmlFor={`item-${item.id}`}
-                        className={item.checked ? 'line-through text-gray-500' : ''}
-                    >
-                        {item.text}
-                    </label>
-                </div>
-            ))}
+            <TWItemsContainer>
+                {items.map((item) => (
+                    <div key={item.id} className="flex items-center">
+                        <input
+                            type="checkbox"
+                            id={`item-${item.id}`}
+                            checked={item.checked}
+                            onChange={() => handleCheckboxChange(item.id)}
+                            className="mr-2"
+                        />
+                        <label
+                            htmlFor={`item-${item.id}`}
+                            className={item.checked ? 'line-through text-gray-500' : ''}
+                        >
+                            {item.text}
+                        </label>
+                    </div>
+                ))}
+            </TWItemsContainer>
         </TWShoppingContainer>
     );
 }
 
-const TWShoppingContainer = tw.div`
+const TWItemsContainer = tw.div`
     flex
     flex-col
     items-center
     space-y-2
+`
+
+const TWShoppingContainer = tw.h1`
+    flex
+    flex-col
 `
 
 export default ShoppingList
