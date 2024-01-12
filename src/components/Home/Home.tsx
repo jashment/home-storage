@@ -21,11 +21,6 @@ const TWAllContainer = tw.div`
   w-full
 `
 
-const TWDrawerContainer = tw.div`
-  md:basis-1/6
-  flex-col
-`
-
 const TWHomeContainer = tw.div`
   flex
   mx-auto
@@ -35,14 +30,6 @@ const TWHomeContainer = tw.div`
 const Heading = tw.h1`
   mx-auto
   font-bold
-`
-
-const TWDrawerButton = tw.button`
-  absolute
-  mt-5
-  ml-5
-  invisible
-  md:visible
 `
 
 export default Home
