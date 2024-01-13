@@ -4,6 +4,7 @@ import ShoppingList from './components/ShoppingList';
 import tw from 'tailwind-styled-components';
 import Drawer from './components/Drawer';
 import { useEffect, useState } from 'react';
+import Storage from './components/Storage';
 
 function App() {
   const location = useLocation();
@@ -19,6 +20,9 @@ function App() {
         break;
       case '/shopping':
         setHeaderText('Shopping List');
+        break;
+      case '/storage':
+        setHeaderText('Storage');
         break;
       default:
         setHeaderText('Default Header');
@@ -38,6 +42,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/shopping' element={<ShoppingList />} />
+        <Route path='/storage' element={<Storage />} />
       </Routes>
     </TWAppContainer>
   )
