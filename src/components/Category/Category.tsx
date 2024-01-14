@@ -15,12 +15,18 @@ const Category = ({ categoryName }: CategoryTypes) => {
 }
 
 const Box = tw.div`
-    border-solid
-    border-2
-    border-cyan-200
-    drop-shadow-md
-    rounded-md
-    bg-white
+    bg-blue-500 
+    hover:bg-blue-700 
+    text-white 
+    font-bold 
+    border-b-4 
+    border-blue-800 
+    rounded-md 
+    shadow-md 
+    transition-transform 
+    transform 
+    hover:scale-105
+    hover:shadow-lg
     p-10
     m-3
 `
