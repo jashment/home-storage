@@ -28,14 +28,21 @@ function App() {
         setHeaderText('Default Header');
     }
   }, [location.pathname]);
+
   return (
     <TWAppContainer>
-    <TWHeader>{headerText}</TWHeader>
-    <TWDrawerButton onClick={() => setDrawerIsOpen(!drawerIsOpen)}>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-      </TWDrawerButton>
+      <TWHeader>
+        <TWDrawerButton onClick={() => setDrawerIsOpen(!drawerIsOpen)}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </TWDrawerButton>
+        <TWHeaderText>
+          {headerText}
+        </TWHeaderText>
+      </TWHeader>
+    
+    
       <TWDrawerContainer>
         <Drawer drawerIsOpen={drawerIsOpen} setDrawerIsOpen={setDrawerIsOpen} />
       </TWDrawerContainer>
@@ -53,18 +60,23 @@ const TWAppContainer = tw.div`
   flex-col
 `
 
-const TWHeader = tw.h1`
-  mx-auto
+const TWHeader = tw.div`
+  flex
+  border-b
+  border-black
+  py-5
+`
+
+const TWHeaderText = tw.h1`
   font-bold
-  my-5
+  basis-11/12
+  text-center
 `
 
 const TWDrawerButton = tw.button`
-  absolute
-  mt-5
-  ml-5
   invisible
   md:visible
+  basis-1/12
 `
 
 const TWDrawerContainer = tw.div`
