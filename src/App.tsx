@@ -8,7 +8,7 @@ import Storage from './components/Storage';
 
 function App() {
   const location = useLocation();
-  const [drawerIsOpen, setDrawerIsOpen] = useState(true)
+  const [drawerIsOpen, setDrawerIsOpen] = useState(false)
 
   
   const [headerText, setHeaderText] = useState('');
@@ -42,7 +42,6 @@ function App() {
         </TWHeaderText>
       </TWHeader>
     
-    
       <TWDrawerContainer>
         <Drawer drawerIsOpen={drawerIsOpen} setDrawerIsOpen={setDrawerIsOpen} />
       </TWDrawerContainer>
@@ -61,7 +60,6 @@ const TWAppContainer = tw.div`
 `
 
 const TWHeader = tw.div`
-  flex
   border-b
   border-black
   py-5
@@ -69,14 +67,13 @@ const TWHeader = tw.div`
 
 const TWHeaderText = tw.h1`
   font-bold
-  basis-11/12
   text-center
 `
 
 const TWDrawerButton = tw.button`
   invisible
   md:visible
-  basis-1/12
+  absolute
 `
 
 const TWDrawerContainer = tw.div`

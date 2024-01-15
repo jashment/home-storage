@@ -25,7 +25,7 @@ const Drawer = ({ drawerIsOpen, setDrawerIsOpen }: DrawerTypes) => {
         md:border-t-0
         md:border-r
         md:h-full
-        md:w-32
+        md:w-48
         md:flex-col
         md:items-center
 
