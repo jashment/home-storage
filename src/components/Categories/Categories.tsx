@@ -24,6 +24,7 @@ const AllCategories = tw.div`
   md:flex-row
   flex-wrap
   justify-around
+  -z-10
 `
 
 export default Categories

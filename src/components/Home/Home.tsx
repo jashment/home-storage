@@ -17,6 +17,11 @@ const Home = () => {
             Shopping List
           </Box>
         </Link>
+        <Link to="/recipe">
+          <Box>
+            Recipes
+          </Box>
+        </Link>
       </TWHomeContainer>
     </TWAllContainer>
   )
