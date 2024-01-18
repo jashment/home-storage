@@ -1,20 +1,15 @@
-import { RefObject } from "react"
 import tw from "tailwind-styled-components"
 import { Link, useLocation } from 'react-router-dom'
 
 interface DrawerTypes {
     drawerIsOpen: boolean
-    ref: RefObject<HTMLDivElement>
 }
 
 const Drawer = ({ drawerIsOpen }: DrawerTypes) => {
     const TWDrawer = tw.div`
-        bg-white
+        bg-lime-300
         flex
         basis-1/2
-        border-solid
-        border-black
-        border-t
         bottom-0
         w-full
         fixed
@@ -22,13 +17,11 @@ const Drawer = ({ drawerIsOpen }: DrawerTypes) => {
         items-center
         justify-evenly
         drop-shadow-xl
-        md:border-t-0
-        md:border-r
         md:h-full
         md:w-48
         md:flex-col
         md:items-center
-        
+        md:bg-white
 
         transition-transform 
         transform 
