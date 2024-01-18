@@ -24,6 +24,9 @@ function App() {
       case '/storage':
         setHeaderText('Storage');
         break;
+      case '/recipe':
+          setHeaderText('Recipes');
+          break;
       default:
         setHeaderText('Default Header');
     }

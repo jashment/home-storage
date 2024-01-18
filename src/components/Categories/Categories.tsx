@@ -9,8 +9,8 @@ const Categories = () => {
     ]
     return (
         <AllCategories>
-            {categoryNames.map((name) => {
-                return <Category categoryName={name} />
+            {categoryNames.map((name, i) => {
+                return <Category key={i} categoryName={name} />
             })}
         </AllCategories>
     )
