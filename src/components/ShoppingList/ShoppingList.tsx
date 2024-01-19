@@ -36,6 +36,12 @@ const ShoppingList = () => {
                         </label>
                     </div>
                 ))}
+                <div className="flex flex-row">
+                    <TWInput
+                        type="text"
+                    ></TWInput>
+                    <TWButton>Add</TWButton>
+                </div>
             </TWItemsContainer>
         </TWShoppingContainer>
     );
@@ -51,6 +57,21 @@ const TWItemsContainer = tw.div`
 const TWShoppingContainer = tw.h1`
     flex
     flex-col
+`
+
+const TWInput = tw.input`
+    border-solid
+    border
+    border-black
+    rounded-md
+`
+
+const TWButton = tw.button`
+    border-solid
+    border
+    border-lime-300
+    rounded-md
+    ml-2
 `
 
 export default ShoppingList
