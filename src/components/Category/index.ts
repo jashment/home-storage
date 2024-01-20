@@ -1,3 +1,3 @@
-import Category from './Category-Container'
+import Category from './Category-Container';
 
-export default Category
+export default Category;

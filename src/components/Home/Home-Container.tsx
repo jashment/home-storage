@@ -1,9 +1,7 @@
-import Home from './Home'
+import Home from './Home';
 
 const HomeContainer = () => {
-  return (
-    <Home />
-  )
-}
+	return <Home />;
+};
 
-export default HomeContainer
+export default HomeContainer;

@@ -1,35 +1,28 @@
-import tw from 'tailwind-styled-components'
-import { Link } from 'react-router-dom'
+import tw from 'tailwind-styled-components';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
-
-  return (
-      <TWHomeContainer>
-        <Link to="/storage">
-          <Box>
-            Storage
-          </Box>
-        </Link>
-        <Link to="/shopping">
-          <Box>
-            Shopping List
-          </Box>
-        </Link>
-        <Link to="/recipe">
-          <Box>
-            Recipes
-          </Box>
-        </Link>
-      </TWHomeContainer>
-  )
-}
+	return (
+		<TWHomeContainer>
+			<Link to="/storage">
+				<Box>Storage</Box>
+			</Link>
+			<Link to="/shopping">
+				<Box>Shopping List</Box>
+			</Link>
+			<Link to="/recipe">
+				<Box>Recipes</Box>
+			</Link>
+		</TWHomeContainer>
+	);
+};
 
 const TWHomeContainer = tw.div`
   flex
   mx-auto
   flex-col
   md:flex-row
-`
+`;
 
 const Box = tw.div`
   border-solid
@@ -41,7 +34,6 @@ const Box = tw.div`
   p-10
   m-3
   hover:drop-shadow-lg
-`
+`;
 
-
-export default Home
+export default Home;

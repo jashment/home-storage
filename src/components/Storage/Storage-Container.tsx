@@ -1,9 +1,7 @@
-import Storage from "./Storage"
+import Storage from './Storage';
 
 const StorageContainer = () => {
-  return (
-    <Storage />
-  )
-}
+	return <Storage />;
+};
 
-export default StorageContainer
+export default StorageContainer;

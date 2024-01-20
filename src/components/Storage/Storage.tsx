@@ -1,9 +1,7 @@
-import Categories from "../Categories"
+import Categories from '../Categories';
 
 const Storage = () => {
-  return (
-    <Categories />
-  )
-}
+	return <Categories />;
+};
 
-export default Storage
+export default Storage;

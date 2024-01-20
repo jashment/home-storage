@@ -1,7 +1,7 @@
-import ShoppingList from "./ShoppingList";
+import ShoppingList from './ShoppingList';
 
 const ShoppingListContainer = () => {
-    return <ShoppingList />
-}
+	return <ShoppingList />;
+};
 
-export default ShoppingListContainer
+export default ShoppingListContainer;

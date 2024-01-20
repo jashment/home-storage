@@ -1,9 +1,7 @@
-import Categories from "./Categories"
+import Categories from './Categories';
 
 const CategoriesContainer = () => {
-    return (
-        <Categories />
-    )
-}
+	return <Categories />;
+};
 
-export default CategoriesContainer
+export default CategoriesContainer;

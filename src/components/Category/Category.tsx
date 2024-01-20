@@ -1,18 +1,16 @@
-import tw from "tailwind-styled-components"
+import tw from 'tailwind-styled-components';
 
 interface CategoryTypes {
-    categoryName: string
+	categoryName: string;
 }
 
 const Category = ({ categoryName }: CategoryTypes) => {
-    return (
-        <Box>
-            <TWCategoryName>
-                {categoryName}
-            </TWCategoryName>
-        </Box>
-    )
-}
+	return (
+		<Box>
+			<TWCategoryName>{categoryName}</TWCategoryName>
+		</Box>
+	);
+};
 
 const Box = tw.div`
     bg-blue-500 
@@ -29,7 +27,7 @@ const Box = tw.div`
     hover:shadow-lg
     p-10
     m-3
-`
+`;
 
 const TWCategoryName = tw.p`
     flex
@@ -37,6 +35,6 @@ const TWCategoryName = tw.p`
     justify-center
     my-auto
     h-full
-`
+`;
 
-export default Category
+export default Category;
