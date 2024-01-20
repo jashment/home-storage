@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom'
 const Home = () => {
 
   return (
-    <TWAllContainer>
       <TWHomeContainer>
-        <p className='mx-auto'>What would you like to do?</p>
         <Link to="/storage">
           <Box>
             Storage
@@ -23,21 +21,14 @@ const Home = () => {
           </Box>
         </Link>
       </TWHomeContainer>
-    </TWAllContainer>
   )
 }
-
-const TWAllContainer = tw.div`
-  flex
-  flex-row
-  h-screen
-  w-full
-`
 
 const TWHomeContainer = tw.div`
   flex
   mx-auto
   flex-col
+  md:flex-row
 `
 
 const Box = tw.div`
@@ -49,6 +40,7 @@ const Box = tw.div`
   bg-white
   p-10
   m-3
+  hover:drop-shadow-lg
 `
 
 
