@@ -1,25 +1,52 @@
-import { useState } from 'react';
+import { FormEvent, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, SyntheticEvent, useEffect, useState } from 'react';
 import tw from 'tailwind-styled-components';
 
 const ShoppingList = () => {
-	const [items, setItems] = useState([
+
+	let allItems: any = [
 		{ id: 1, text: 'Item 1', checked: false },
 		{ id: 2, text: 'Item 2', checked: false }
-		// Add more items as needed
-	]);
+	]
 
-	const handleCheckboxChange = (itemId: number) => {
-		setItems((prevItems) =>
-			prevItems.map((item) =>
+	const [items, setItems] = useState(allItems);
+	const [idName, setIdName] = useState({ id: null, text: '' })
+
+	const handleCheckboxChange = (itemId: Key | null | undefined) => {
+		setItems((prevItems: any[]) =>
+			prevItems.map((item: { id: number; checked: any; }) =>
 				item.id === itemId ? { ...item, checked: !item.checked } : item
 			)
 		);
 	};
 
+	const handleTextInputChange = (e: { preventDefault: () => void; target: { value: any; }; }) => {
+		e.preventDefault()
+		console.log(items.length)
+		setIdName({ id: items.length + 1, text: e.target.value })
+	}
+
+	const handleSubmit = (e) => {
+		e.preventDefault()
+		if (!idName.text) {
+			return
+		}
+		console.log(items[items.length - 1])
+		if (items[items.length - 1].hasOwnProperty(idName.id) && items[items.length - 1].hasOwnProperty(idName.text)) {
+			return
+		}
+		console.log(items)
+		setItems([...items, { id: idName.id, text: idName.text, checked: false }])
+		console.log(items, items.length)
+	}
+
+	useEffect(() => {
+
+	}, [items])
+
 	return (
 		<TWShoppingContainer>
 			<TWItemsContainer>
-				{items.map((item) => (
+				{items.map((item: { id: Key | null | undefined; checked: boolean | undefined; text: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }) => (
 					<div key={item.id} className="flex items-center">
 						<input
 							type="checkbox"
@@ -37,8 +64,10 @@ const ShoppingList = () => {
 					</div>
 				))}
 				<div className="flex flex-row">
-					<TWInput type="text"></TWInput>
-					<TWButton>Add</TWButton>
+					<form onSubmit={handleSubmit}>
+						<TWInput type="text" onChange={handleTextInputChange} value={idName.text || ''}></TWInput>
+						<TWButton type='submit'>Add</TWButton>
+					</form>
 				</div>
 			</TWItemsContainer>
 		</TWShoppingContainer>
@@ -65,11 +94,20 @@ const TWInput = tw.input`
 `;
 
 const TWButton = tw.button`
-    border-solid
-    border
-    border-lime-300
-    rounded-md
-    ml-2
+	bg-blue-500 
+	hover:bg-blue-700 
+	text-white 
+	font-bold 
+	border-b-4 
+	border-blue-800 
+	rounded-md 
+	shadow-md 
+	transition-transform 
+	transform 
+	hover:scale-105
+	hover:shadow-lg
+	p-3
+	mx-1
 `;
 
 export default ShoppingList;
