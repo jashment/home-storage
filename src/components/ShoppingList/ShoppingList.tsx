@@ -1,6 +1,12 @@
 import { FormEvent, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, SyntheticEvent, useEffect, useState } from 'react';
 import tw from 'tailwind-styled-components';
 
+interface idNameType {
+	id: number | null
+	text: string
+	checked: boolean
+}
+
 const ShoppingList = () => {
 
 	let allItems: any = [
@@ -9,7 +15,7 @@ const ShoppingList = () => {
 	]
 
 	const [items, setItems] = useState(allItems);
-	const [idName, setIdName] = useState({ id: null, text: '' })
+	const [idName, setIdName] = useState<idNameType>({ id: null, text: '', checked: false })
 
 	const handleCheckboxChange = (itemId: Key | null | undefined) => {
 		setItems((prevItems: any[]) =>
@@ -22,21 +28,19 @@ const ShoppingList = () => {
 	const handleTextInputChange = (e: { preventDefault: () => void; target: { value: any; }; }) => {
 		e.preventDefault()
 		console.log(items.length)
-		setIdName({ id: items.length + 1, text: e.target.value })
+		setIdName({ id: items.length + 1, text: e.target.value, checked: false })
 	}
 
-	const handleSubmit = (e) => {
+	const handleSubmit = (e: { preventDefault: () => void; }) => {
 		e.preventDefault()
 		if (!idName.text) {
 			return
 		}
-		console.log(items[items.length - 1])
-		if (items[items.length - 1].hasOwnProperty(idName.id) && items[items.length - 1].hasOwnProperty(idName.text)) {
+		console.log(idName.id && (idName.id in items[items.length - 1]))
+		if (idName.id &&  items[items.length - 1].id === idName.id) {
 			return
 		}
-		console.log(items)
-		setItems([...items, { id: idName.id, text: idName.text, checked: false }])
-		console.log(items, items.length)
+		setItems([...items, { id: idName.id, text: idName.text, checked: idName.checked }])
 	}
 
 	useEffect(() => {
