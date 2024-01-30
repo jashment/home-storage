@@ -6,7 +6,12 @@ const Categories = () => {
 	return (
 		<AllCategories>
 			{categoryNames.map((name, i) => {
-				return <Category key={i} categoryName={name} />;
+				return (
+					<Category
+						key={i}
+						categoryName={name}
+					/>
+				);
 			})}
 		</AllCategories>
 	);

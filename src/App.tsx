@@ -72,13 +72,28 @@ function App() {
 			</TWHeader>
 
 			<TWDrawerContainer>
-				<Drawer drawerIsOpen={drawerIsOpen} setDrawerIsOpen={setDrawerIsOpen} />
+				<Drawer
+					drawerIsOpen={drawerIsOpen}
+					setDrawerIsOpen={setDrawerIsOpen}
+				/>
 			</TWDrawerContainer>
 			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/shopping" element={<ShoppingList />} />
-				<Route path="/storage" element={<Storage />} />
-				<Route path="/recipe" element={<Storage />} />
+				<Route
+					path="/"
+					element={<Home />}
+				/>
+				<Route
+					path="/shopping"
+					element={<ShoppingList />}
+				/>
+				<Route
+					path="/storage"
+					element={<Storage />}
+				/>
+				<Route
+					path="/recipe"
+					element={<Storage />}
+				/>
 			</Routes>
 		</TWAppContainer>
 	);

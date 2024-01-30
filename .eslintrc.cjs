@@ -56,7 +56,9 @@ module.exports = {
         "tabWidth": 2,
         "indentStyle": "space",
         "useTabs": true,
-        "trailingComma": "none"
+        "trailingComma": "none",
+        "bracketSameLine": false,
+        "singleAttributePerLine": true
       }
     ],
     // Disallow the `any` type.
