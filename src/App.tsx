@@ -107,7 +107,7 @@ const TWAppContainer = tw.div`
 const TWHeader = tw.div`
   bg-lime-300
   py-5
-  z-10
+  z-20
 `;
 
 const TWHeaderText = tw.h1`
@@ -125,6 +125,7 @@ const TWDrawerButton = tw.button`
 const TWDrawerContainer = tw.div`
   md:basis-1/6
   flex-col
+  z-10
 `;
 
 export default App;
