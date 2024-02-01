@@ -27,7 +27,7 @@ const TWHomeContainer = tw.div`
 const Box = tw.div`
   border-solid
   border-2
-  border-lime-300
+  border-main
   drop-shadow-md
   rounded-md
   bg-white

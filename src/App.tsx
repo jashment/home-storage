@@ -105,7 +105,7 @@ const TWAppContainer = tw.div`
 `;
 
 const TWHeader = tw.div`
-  bg-lime-300
+  bg-main
   py-5
   z-20
 `;
