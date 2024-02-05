@@ -35,6 +35,7 @@ const TWCategoryName = tw.p`
     justify-center
     my-auto
     h-full
+    text-secondary
 `;
 
 export default Category;

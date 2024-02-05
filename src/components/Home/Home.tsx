@@ -34,6 +34,7 @@ const Box = tw.div`
   p-10
   m-3
   hover:drop-shadow-lg
+  text-secondary
 `;
 
 export default Home;
