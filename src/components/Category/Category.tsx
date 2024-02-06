@@ -1,15 +1,15 @@
 import tw from 'tailwind-styled-components';
 
 interface CategoryTypes {
-	categoryName: string;
+    categoryName: string;
 }
 
 const Category = ({ categoryName }: CategoryTypes) => {
-	return (
-		<Box>
-			<TWCategoryName>{categoryName}</TWCategoryName>
-		</Box>
-	);
+    return (
+        <Box>
+            <TWCategoryName>{categoryName}</TWCategoryName>
+        </Box>
+    );
 };
 
 const Box = tw.div`
@@ -25,7 +25,7 @@ const Box = tw.div`
     transform 
     hover:scale-105
     hover:shadow-lg
-    p-10
+    p-5
     m-3
 `;
 

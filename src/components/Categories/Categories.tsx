@@ -1,5 +1,6 @@
 import tw from 'tailwind-styled-components';
 import Category from '../Category';
+import { Link } from 'react-router-dom';
 
 const Categories = () => {
 	const categoryNames = ['Food', 'Bathroom', 'First Aid'];
@@ -7,10 +8,12 @@ const Categories = () => {
 		<AllCategories>
 			{categoryNames.map((name, i) => {
 				return (
-					<Category
-						key={i}
-						categoryName={name}
-					/>
+					<Link to={name.toLowerCase()}>
+						<Category
+							key={i}
+							categoryName={name}
+						/>
+					</Link>
 				);
 			})}
 		</AllCategories>

@@ -94,6 +94,18 @@ function App() {
 					path="/recipe"
 					element={<Storage />}
 				/>
+				<Route
+					path="/food"
+					element={<Storage />}
+				/>
+				<Route
+					path="/bathroom"
+					element={<Storage />}
+				/>
+				<Route
+					path="/firstaid"
+					element={<Storage />}
+				/>
 			</Routes>
 		</TWAppContainer>
 	);

@@ -4,14 +4,15 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <TWHomeContainer>
+      <p>What would you like to do?</p>
       <Link to="/storage">
-        <Box>Storage</Box>
+        <Box>View Storage</Box>
       </Link>
       <Link to="/shopping">
-        <Box>Shopping List</Box>
+        <Box>View Shopping List</Box>
       </Link>
       <Link to="/recipe">
-        <Box>Recipes</Box>
+        <Box>View/Add Recipes</Box>
       </Link>
     </TWHomeContainer>
   );
@@ -31,9 +32,9 @@ const Box = tw.div`
   drop-shadow-md
   rounded-md
   bg-white
-  p-10
+  p-5
   m-3
-  hover:drop-shadow-lg
+  md:hover:drop-shadow-lg
 `;
 
 export default Home;
