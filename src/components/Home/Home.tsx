@@ -2,19 +2,19 @@ import tw from 'tailwind-styled-components';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-	return (
-		<TWHomeContainer>
-			<Link to="/storage">
-				<Box>Storage</Box>
-			</Link>
-			<Link to="/shopping">
-				<Box>Shopping List</Box>
-			</Link>
-			<Link to="/recipe">
-				<Box>Recipes</Box>
-			</Link>
-		</TWHomeContainer>
-	);
+  return (
+    <TWHomeContainer>
+      <Link to="/storage">
+        <Box>Storage</Box>
+      </Link>
+      <Link to="/shopping">
+        <Box>Shopping List</Box>
+      </Link>
+      <Link to="/recipe">
+        <Box>Recipes</Box>
+      </Link>
+    </TWHomeContainer>
+  );
 };
 
 const TWHomeContainer = tw.div`
@@ -34,7 +34,6 @@ const Box = tw.div`
   p-10
   m-3
   hover:drop-shadow-lg
-  text-secondary
 `;
 
 export default Home;
