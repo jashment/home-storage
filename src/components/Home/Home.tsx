@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <TWHomeContainer>
-      <p>What would you like to do?</p>
       <Link to="/storage">
         <Box>View Storage</Box>
       </Link>
