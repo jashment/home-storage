@@ -18,7 +18,7 @@ const Recipes = () => {
       {allRecipes.map(
         (recipe) => <Box>{recipe}</Box>
       )}
-      <TWButtonSpan>
+      <TWButtonSpan href="#">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -44,7 +44,8 @@ const TWRecipesContainer = tw.div`
   flex-col
   md:flex-row
   flex-wrap
-  mx-10
+  justify-center
+  mx-20
   mb-24
 `;
 
@@ -65,7 +66,7 @@ const Box = tw.div`
     m-3
 `;
 
-const TWButtonSpan = tw.span`
+const TWButtonSpan = tw.a`
     flex
     flex-col
     items-center
