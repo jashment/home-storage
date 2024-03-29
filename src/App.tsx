@@ -5,6 +5,7 @@ import tw from 'tailwind-styled-components';
 import Drawer from './components/Drawer';
 import { useEffect, useState } from 'react';
 import Storage from './components/Storage';
+import Recipes from './components/Recipes';
 
 function App() {
 	const location = useLocation();
@@ -92,7 +93,7 @@ function App() {
 				/>
 				<Route
 					path="/recipe"
-					element={<Storage />}
+					element={<Recipes/>}
 				/>
 				<Route
 					path="/food"
