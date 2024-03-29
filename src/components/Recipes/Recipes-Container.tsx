@@ -1,7 +1,7 @@
-import Recipes from "./Recipes";
+import Recipes from "./Recipes"
 
 const RecipesContainer = () => {
-  return <Recipes></Recipes>
-}
+  return <Recipes />
+};
 
 export default RecipesContainer

@@ -44,7 +44,7 @@ const Drawer = ({ drawerIsOpen }: DrawerTypes) => {
 						viewBox="0 0 24 24"
 						strokeWidth={1.5}
 						stroke="currentColor"
-						className="w-6 h-6 stroke-accent"
+						className="w-6 h-6 stroke-accent  md:stroke-current"
 					>
 						<path
 							strokeLinecap="round"
@@ -66,7 +66,7 @@ const Drawer = ({ drawerIsOpen }: DrawerTypes) => {
 						viewBox="0 0 24 24"
 						strokeWidth={1.5}
 						stroke="currentColor"
-						className="w-6 h-6 stroke-accent"
+						className="w-6 h-6 stroke-accent  md:stroke-current"
 					>
 						<path
 							strokeLinecap="round"
@@ -88,7 +88,7 @@ const Drawer = ({ drawerIsOpen }: DrawerTypes) => {
 						viewBox="0 0 24 24"
 						strokeWidth={1.5}
 						stroke="currentColor"
-						className="w-6 h-6 stroke-accent"
+						className="w-6 h-6 stroke-accent  md:stroke-current"
 					>
 						<path
 							strokeLinecap="round"
@@ -111,7 +111,7 @@ const Drawer = ({ drawerIsOpen }: DrawerTypes) => {
 						viewBox="0 0 24 24"
 						strokeWidth={1.5}
 						stroke="currentColor"
-						className="w-6 h-6 stroke-accent"
+						className="w-6 h-6 stroke-accent  md:stroke-current"
 					>
 						<path
 							strokeLinecap="round"
